@@ -1,1 +1,31 @@
-wolf
+*.pyc
+__pycache__
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+.Python
+lib/
+env/
+venv/
+build/
+
+
+
+# Mac/OSX
+.DS_Store
+
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

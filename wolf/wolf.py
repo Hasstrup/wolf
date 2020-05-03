@@ -1,10 +1,16 @@
+from .model import Model
+
 class Wolf:
     @classmethod
-    def __new__(wlf, config):
-        """ should take in the conig"""
+    def configure(cls, config={}):
+        """ Takes in the config settings and returns a new instance of itself"""
+        return cls(store_path=config["store_path"])
+        pass
 
-    def build_schema(schema={}, model=None):
-        """ should take in the schema and validate the relationship between the fields and the colums"""
+    def __init__(self, store_path=""):
+        self.store_path = store_path
 
-    def __init__(self):
-        """ check for connection status & set up config """
+    @classmethod
+    def define_model(cls, model_name, schema):
+        model = Model(table_name=model_name.lower(), schema=schema)
+        return model

@@ -13,6 +13,8 @@ lib/
 env/
 venv/
 build/
+dist/
+*egg-info
 
 
 
@@ -20,6 +22,8 @@ build/
 .DS_Store
 
 
+#vscode
+.vscode
 
 # Environments
 .env

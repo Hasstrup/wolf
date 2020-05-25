@@ -1,3 +1,11 @@
+from ..models.application import Application
+from ..models import db_session
+
+
 class ApplicationsController:
-    def index():
-        return "Hello from Wolf"
+    def index(self):
+        """
+          Return a list of applications registered on wolf
+        """
+        apps = db_session.query(Application).all()
+        return {"applications": apps}
